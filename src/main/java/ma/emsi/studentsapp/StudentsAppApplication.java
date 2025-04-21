@@ -19,9 +19,9 @@ private ProductRepository productRepository;
 
     @Override
     public void run(String... args) throws Exception {
-        productRepository.save(new Product(1,"oussama",15,12));
-        productRepository.save(new Product(2,"oussama1",17,12));
-        productRepository.save(new Product(3,"oussama2",18,14));
+        productRepository.save(new Product(1,"Pc",15,12));
+        productRepository.save(new Product(2,"Phone",17,12));
+        productRepository.save(new Product(3,"Clavier",18,14));
         List<Product> Products = productRepository.findAll();
         Products.forEach(s->System.out.println(s.toString()));
         Product s= productRepository.findById(Long.valueOf(1)).get();
